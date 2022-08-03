@@ -53,7 +53,7 @@ function Users() {
   useEffect(() => {
     const fetchUserData = async () => {
       const res = await axios.get(
-        "https://randomuser.me/api/?results=50&inc=gender,name,email,login,registered,picture"
+        "https://randomuser.me/api/?results=50&inc=gender,name,email,login,registered,picture&noinfo"
       );
       console.log(res.data.results[0]);
       setUsers(res.data.results);
@@ -70,6 +70,7 @@ function Users() {
           display: "flex",
           justifyContent: "flex-start",
           alignItems: "center",
+          marginBottom: "10px",
         }}
       >
         <Grid item md={12} lg={4}>

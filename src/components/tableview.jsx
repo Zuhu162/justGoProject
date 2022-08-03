@@ -41,7 +41,13 @@ function TableView(props) {
                   </Box>
                 </Box>
               </TableCell>
-              <TableCell>{new Date().toDateString()}</TableCell>
+              <TableCell>
+                {user.registered.date
+                  .substring(0, 10)
+                  .split("-")
+                  .reverse()
+                  .join("-")}
+              </TableCell>
               <TableCell>{user.login.username}</TableCell>
             </TableRow>
           ))}

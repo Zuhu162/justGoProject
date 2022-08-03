@@ -35,7 +35,13 @@ function TileView(props) {
               </Box>
               <Box sx={{ display: "flex" }}>
                 <CalendarMonthIcon sx={{ marginRight: "10px" }} />
-                <Typography variant="p">{user.registered.date}</Typography>
+                <Typography variant="p">
+                  {user.registered.date
+                    .substring(0, 10)
+                    .split("-")
+                    .reverse()
+                    .join("-")}
+                </Typography>
               </Box>
             </CardContent>
           </Card>
