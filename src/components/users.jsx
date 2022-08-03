@@ -68,29 +68,37 @@ function Users() {
         container
         sx={{
           display: "flex",
-          justifyContent: "flex-start",
+          justifyContent: "flex-end",
           alignItems: "center",
           marginBottom: "10px",
         }}
       >
-        <Grid item md={12} lg={4}>
+        <Grid item xs={12} sm={12} md={12} lg={4}>
           <SearchBar onSearch={handleSearch}></SearchBar>
         </Grid>
-        <Grid item md={12} lg={4}>
+        <Grid item xs={12} sm={12} md={12} lg={4}>
           <Filter onFilter={handleFilter} criterias={criterias}></Filter>
         </Grid>
-        <Grid item md={12} lg={4}>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  color="secondary"
-                  onChange={() => setTileView(!tileView)}
-                />
-              }
-              label="Tile View"
-            />
-          </FormGroup>
+        <Grid item xs={12} sm={12} md={12} lg={4}>
+          <Box
+            sx={{
+              display: "flex",
+              // sm: { justifyContent: "flex-start" },
+              justifyContent: "flex-end",
+            }}
+          >
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    color="secondary"
+                    onChange={() => setTileView(!tileView)}
+                  />
+                }
+                label="Tile View"
+              />
+            </FormGroup>
+          </Box>
         </Grid>
       </Grid>
 
