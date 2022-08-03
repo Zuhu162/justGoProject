@@ -11,6 +11,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import TileView from "./tileView";
 import Grid from "@mui/material/Grid";
+import Fade from "@mui/material/Fade";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -55,7 +56,6 @@ function Users() {
       const res = await axios.get(
         process.env.REACT_APP_RANDOMUSERGENERATOR_LINK
       );
-      console.log(res.data.results[0]);
       setUsers(res.data.results);
     };
     fetchUserData();
@@ -101,7 +101,6 @@ function Users() {
           </Box>
         </Grid>
       </Grid>
-
       {tileView ? (
         <TileView users={paginated}></TileView>
       ) : (
