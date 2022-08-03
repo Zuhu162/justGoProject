@@ -53,7 +53,7 @@ function Users() {
   useEffect(() => {
     const fetchUserData = async () => {
       const res = await axios.get(
-        "https://randomuser.me/api/?results=50&inc=gender,name,email,login,registered,picture&noinfo"
+        process.env.REACT_APP_RANDOMUSERGENERATOR_LINK
       );
       console.log(res.data.results[0]);
       setUsers(res.data.results);
