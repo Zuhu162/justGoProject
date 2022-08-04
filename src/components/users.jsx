@@ -39,13 +39,10 @@ function Users() {
   };
 
   let searched = searching(search, filtered);
-  console.log(searched);
-  console.log("Searched!");
 
   //PAGINATION
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    console.log(page);
   };
 
   let paginated = paginate(searched, currentPage, pageSize);

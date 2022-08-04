@@ -9,8 +9,6 @@ export default function Pagination(props) {
     pageNums.push(i);
   }
 
-  console.log(pageNums);
-
   return (
     <ButtonGroup color="secondary" aria-label="outlined primary button group">
       {pageNums.map((page) => (
