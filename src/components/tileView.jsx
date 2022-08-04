@@ -21,6 +21,7 @@ function TileView(props) {
                   <img
                     style={{ borderRadius: "50%" }}
                     src={user.picture.thumbnail}
+                    alt={`${user.email} thumbnail`}
                   />
                 }
                 title={
