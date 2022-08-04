@@ -11,7 +11,6 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import TileView from "./tileView";
 import Grid from "@mui/material/Grid";
-import Fade from "@mui/material/Fade";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -36,6 +35,7 @@ function Users() {
   //SEARCH
   const handleSearch = (value) => {
     setSearch(value);
+    setCurrentPage(1);
   };
 
   let searched = searching(search, filtered);
